@@ -1,0 +1,30 @@
+name: Ping Hugging Face Space
+
+on:
+  schedule:
+    # 每 30 分钟运行一次
+    # 格式: 分钟 小时 天 月 星期几
+    # 下面的 cron 表达式表示每 30 分钟运行一次
+    - cron: '*/30 * * * *'
+  
+  # 也允许手动触发工作流
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
+      - name: Run ping script
+        run: python ping_huggingface.py
