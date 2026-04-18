@@ -1,5 +1,2 @@
 requests
-ccxt
-pandas
-pandas-ta
-python-dotenv
+
