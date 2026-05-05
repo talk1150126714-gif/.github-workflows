@@ -4,9 +4,12 @@ import time
 
 # ==================== 配置区 ====================
 HUGGING_FACE_SPACE_URLS = [
+    "https://pine6-open.hf.space/",
     "https://pine6-sol.hf.space/",
     "https://pine6-plan.hf.space/",     # ← 替换成你要访问的页面
     "https://pine6-open.hf.space/api/health",       # 推荐添加健康检查接口
+    "https://pine6-sol.hf.space/api/health",
+    "https://pine6-plan.hf.space/api/health",
     # "https://pine6-open.hf.space/your-other-page", # 继续添加更多
 ]
 
